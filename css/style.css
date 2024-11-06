@@ -30,18 +30,19 @@ header{
   /* Defino las columnas que necesito */
   grid-template-columns: 2fr 8fr 2fr;
 
-  /* Le digo que etiqueta ocupa en las columnas (arriba) */
-  grid-template-areas: "logo penegordo nav";
+  /* Le digo que etiqueta ocupa en las columnas (arriba). Lo de abajo sirve para asignar donde va lo que quiero que vaya (Mirar abajo) */
+  grid-template-areas: "logo contenedor nav";
 }
 
 /* Después de hacer lo de arriba le digo que le toca ir en nav  */
 nav{
+  /* Utilizar el grid-area:; me sirve para decirle que lo que he llamado nav arriba y le he dicho que ocupa 2fr pues en el grid-area: nav; va a a izquierda del todo y que
+  ocupa 2fr (columnas) */
   grid-area: nav;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-
 }
 
 li{
