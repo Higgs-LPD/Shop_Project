@@ -25,8 +25,32 @@ body{
 /* Header */
 header{
   grid-area: header;
-  display: grid;
   background-color: black;
+  display: grid;
+  /* Defino las columnas que necesito */
+  grid-template-columns: 2fr 8fr 2fr;
+
+  /* Le digo que etiqueta ocupa en las columnas (arriba) */
+  grid-template-areas: "logo penegordo nav";
+}
+
+/* Después de hacer lo de arriba le digo que le toca ir en nav  */
+nav{
+  grid-area: nav;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+}
+
+li{
+  display: inline-block;
+  margin: 10px;
+}
+
+ul{
+  list-style: none;
 }
 
 /* Main */
@@ -62,14 +86,14 @@ footer{
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   /* body{
     grid-template-columns: ;
   } */
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
   /* body{
     grid-template-columns: ;
   } */
