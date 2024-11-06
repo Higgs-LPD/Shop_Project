@@ -45,19 +45,32 @@ footer{
 
 
 
+/* Si empiezo haciendolo desde la versión pc es max-width y si empiezo por la versión móvil es min-width */
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (max-width: 600px) {
+  body{
+    display: grid;
+    /* 12 columnas de 1fracción se suele usar para versión pc */
+    grid-template-columns: 1fr; 
+  
+    /*esto es para las filas, en este caso para mi es 100px para el header, 
+    1fr para el main para que se adapte al contenido y 100px para el footer */
+    grid-template-rows: 100px 1fr 100px;
+    min-height: 100vh;
+  }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+  /* body{
+    grid-template-columns: ;
+  } */
 }
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (min-width: 1200px) {
+  /* body{
+    grid-template-columns: ;
+  } */
 }
