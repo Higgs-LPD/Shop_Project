@@ -58,7 +58,7 @@ a:hover{
 
 li{
   display: inline-block;
-  margin: 10px;
+  margin: 5px;
 }
 
 ul{
@@ -67,15 +67,16 @@ ul{
 
 /* Main */
 main{
-grid-area: main;
-display: grid;
-background-color: #334f53;
+  display: grid;
+  grid-area: main;
+  background-color: #334f53;
 }
 
 /* Footer */
 footer{
-  grid-area: footer;
   display: grid;
+  grid-area: footer;
+  grid-template-columns: 2fr 8fr 2fr;
   background-color: #1f0a1d;
 }
 

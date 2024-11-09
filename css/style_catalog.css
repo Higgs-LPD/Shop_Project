@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* CSS Grid */
+  body{
+    font-family: Arial Narrow, Verdana, Helvetica Neue, Lato, Monserrat;
+    display: grid;
+    /* 12 columnas de 1fracción se suele usar para versión pc */
+    grid-template-columns: repeat(12, 1fr); 
+  
+    /*esto es para las filas, en este caso para mi es 100px para el header, 
+    1fr para el main para que se adapte al contenido y 100px para el footer */
+    grid-template-rows: 100px 1fr 100px;
+    min-height: 100vh;
+  
+    /* Sirve para decir lo que ocupan las etiquetas, en este caso son las 12 columnas y las 3 filas */
+    grid-template-areas:
+      "header header header header header header header header header header header header"
+      "main main main main main main main main main main main main"
+      "footer footer footer footer footer footer footer footer footer footer footer footer"
+  }
+  
+  /* Header */
+  header{
+    grid-area: header;
+    background-color: #1f0a1d;
+    display: grid;
+    /* Defino las columnas que necesito */
+    grid-template-columns: 2fr 8fr 2fr;
+  
+    /* Le digo que etiqueta ocupa en las columnas (arriba). Lo de abajo sirve para asignar donde va lo que quiero que vaya (Mirar abajo) */
+    grid-template-areas: "logo contenedor nav";
+  }
+  
+  /* Después de hacer lo de arriba le digo que le toca ir en nav  */
+  nav{
+    /* Utilizar el grid-area:; me sirve para decirle que lo que he llamado nav arriba y le he dicho que ocupa 2fr pues en el grid-area: nav; va a a izquierda del todo y que
+    ocupa 2fr (columnas) */
+    grid-area: nav;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  a{
+    text-decoration: none;
+    color: #334f53;
+  }
+  
+  a:hover{
+    color: #99173c;
+  }
+  
+  
+  li{
+    display: inline-block;
+    margin: 5px;
+  }
+  
+  ul{
+    list-style: none;
+  }
+  
+  /* Main */
+  main{
+  grid-area: main;
+  display: grid;
+  background-color: #334f53;
+  }
+  
+  /* Footer */
+  footer{
+    grid-area: footer;
+    display: grid;
+    grid-template-columns: 2fr 8fr 2fr;
+    background-color: #1f0a1d;
+  }
+  
+  footer p{
+    color: white;
+  }
+  
+  
+  
+  /* Si empiezo haciendolo desde la versión pc es max-width y si empiezo por la versión móvil es min-width */
+  
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (max-width: 600px) {
+    body{
+      display: grid;
+      /* 12 columnas de 1fracción se suele usar para versión pc */
+      grid-template-columns: 1fr; 
+    
+      /*esto es para las filas, en este caso para mi es 100px para el header, 
+      1fr para el main para que se adapte al contenido y 100px para el footer */
+      grid-template-rows: 100px 1fr 100px;
+      min-height: 100vh;
+    }
+  }
+  
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (max-width: 768px) {
+    /* body{
+      grid-template-columns: ;
+    } */
+  }
+  
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (max-width: 1200px) {
+    /* body{
+      grid-template-columns: ;
+    } */
+  }
