@@ -6,6 +6,7 @@
 
 /* CSS Grid */
 body{
+  font-family: Arial Narrow, Verdana, Helvetica Neue, Lato, Monserrat;
   display: grid;
   /* 12 columnas de 1fracción se suele usar para versión pc */
   grid-template-columns: repeat(12, 1fr); 
@@ -25,7 +26,7 @@ body{
 /* Header */
 header{
   grid-area: header;
-  background-color: black;
+  background-color: #1f0a1d;
   display: grid;
   /* Defino las columnas que necesito */
   grid-template-columns: 2fr 8fr 2fr;
@@ -42,8 +43,18 @@ nav{
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
 }
+
+
+a{
+  text-decoration: none;
+  color: #334f53;
+}
+
+a:hover{
+  color: #99173c;
+}
+
 
 li{
   display: inline-block;
@@ -58,14 +69,18 @@ ul{
 main{
 grid-area: main;
 display: grid;
-background-color: aqua;
+background-color: #334f53;
 }
 
 /* Footer */
 footer{
   grid-area: footer;
   display: grid;
-  background-color: black;
+  background-color: #1f0a1d;
+}
+
+footer p{
+  color: white;
 }
 
 
