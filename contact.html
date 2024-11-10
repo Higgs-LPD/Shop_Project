@@ -20,14 +20,23 @@
     </header>
 
     <main>
-      <div id="fromulario">
-        <input type="text">
-        <label for="">Nom</label>
-        <input type="text">
-        <label for="">Cognom</label>
-        <input type="email">
-        <label for="">Adreça</label>
-      </div>
+        <form class="formulario-contacto" action="contact.php" method="post">
+            <h2>Contacte </h2>
+            
+            <label for="nombre">Nom</label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="cognom">Cognom</label>
+            <input type="text" id="cognom" name="cognom" required>
+            
+            <label for="email">Adreça</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="mensaje">Missatge</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+            
+            <button type="submit">Enviar Mensaje</button>
+          </form>
     </main>
 
     <footer>
