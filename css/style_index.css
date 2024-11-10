@@ -23,6 +23,25 @@ body{
     "footer footer footer footer footer footer footer footer footer footer footer footer"
 }
 
+/* CSS Grid */
+body{
+  font-family: Arial Narrow, Verdana, Helvetica Neue, Lato, Monserrat;
+  display: grid;
+  /* 12 columnas de 1fracción se suele usar para versión pc */
+  grid-template-columns: repeat(12, 1fr); 
+
+  /*esto es para las filas, en este caso para mi es 100px para el header, 
+  1fr para el main para que se adapte al contenido y 100px para el footer */
+  grid-template-rows: 100px 1fr 100px;
+  min-height: 100vh;
+
+  /* Sirve para decir lo que ocupan las etiquetas, en este caso son las 12 columnas y las 3 filas */
+  grid-template-areas:
+    "header header header header header header header header header header header header"
+    "main main main main main main main main main main main main"
+    "footer footer footer footer footer footer footer footer footer footer footer footer"
+}
+
 /* Header */
 header{
   grid-area: header;
@@ -35,6 +54,13 @@ header{
   grid-template-areas: "logo contenedor nav";
 }
 
+header img {
+  width: 5em;
+  height: auto;
+  align-self: center;
+  margin-left: 1em;
+}
+
 /* Después de hacer lo de arriba le digo que le toca ir en nav  */
 nav{
   /* Utilizar el grid-area:; me sirve para decirle que lo que he llamado nav arriba y le he dicho que ocupa 2fr pues en el grid-area: nav; va a a izquierda del todo y que
@@ -45,6 +71,19 @@ nav{
   align-items: center;
 }
 
+#banner{
+  height: 50vh;
+  background-image: url("../img/material_Escolar_vuelta_cole_consejos_ahorrar.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /*cammbiar el color */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 a{
   text-decoration: none;
@@ -72,13 +111,60 @@ main{
   background-color: #334f53;
 }
 
+#hot img{
+  width: 15em;
+  height: 15em;
+  border: solid black;
+  border-width: 0.5em;
+}
+
+article h2{
+  font-size: 5em;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+#hot{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 10px;
+
+}
+
+#hotp{
+  font-size: 25px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
 /* Footer */
 footer{
   display: grid;
   grid-area: footer;
-  grid-template-columns: 2fr 8fr 2fr;
+  grid-template-columns: 4fr 2fr 4fr;
+  gap: 20px;
+  padding: 20px;
   background-color: #1f0a1d;
+  gap: 1em;
 }
+
+#footerflex {
+  display: contents; /* Para usar cada .footer-content como item del grid */
+  height: 100%;
+}
+
+.footer-content {
+  text-align: center;
+  color: white;
+}
+
 
 footer p{
   color: white;
