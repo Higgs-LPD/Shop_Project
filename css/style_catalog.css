@@ -78,10 +78,13 @@
   display: grid;
   grid-template-columns: 4fr 4fr 4fr 4fr;
   grid-template-areas: "section" "section";
-  background-color: #334f53;
+  background-color: #e5ead4;
   }
 
-
+.img{
+  max-height: 300px;
+  width: auto;
+}
 
 /* Footer */
 footer{
