@@ -23,25 +23,6 @@ body{
     "footer footer footer footer footer footer footer footer footer footer footer footer"
 }
 
-/* CSS Grid */
-body{
-  font-family: Arial Narrow, Verdana, Helvetica Neue, Lato, Monserrat;
-  display: grid;
-  /* 12 columnas de 1fracción se suele usar para versión pc */
-  grid-template-columns: repeat(12, 1fr); 
-
-  /*esto es para las filas, en este caso para mi es 100px para el header, 
-  1fr para el main para que se adapte al contenido y 100px para el footer */
-  grid-template-rows: 100px 1fr 100px;
-  min-height: 100vh;
-
-  /* Sirve para decir lo que ocupan las etiquetas, en este caso son las 12 columnas y las 3 filas */
-  grid-template-areas:
-    "header header header header header header header header header header header header"
-    "main main main main main main main main main main main main"
-    "footer footer footer footer footer footer footer footer footer footer footer footer"
-}
-
 /* Header */
 header{
   grid-area: header;

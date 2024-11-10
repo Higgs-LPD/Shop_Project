@@ -145,14 +145,30 @@ main{
 
 /* Footer */
 footer{
-  grid-area: footer;
   display: grid;
+  grid-area: footer;
+  grid-template-columns: 4fr 2fr 4fr;
+  gap: 20px;
+  padding: 20px;
   background-color: #1f0a1d;
+  gap: 1em;
 }
-  
+
+#footerflex {
+  display: contents; /* Para usar cada .footer-content como item del grid */
+  height: 100%;
+}
+
+.footer-content {
+  text-align: center;
+  color: white;
+}
+
+
 footer p{
   color: white;
 }
+
 
   
   
