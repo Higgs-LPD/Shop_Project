@@ -23,20 +23,30 @@
         <form class="formulario-contacto" action="contact.php" method="post">
             <h2>Formulari Contacte</h2>
             
-            <label for="nombre">Nom</label>
-            <input type="text" id="nombre" name="nombre" required>
+            <div class="form">
+                <label for="nombre">Nom</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
 
-            <label for="cognom">Cognom</label>
-            <input type="text" id="cognom" name="cognom" required>
+            <div class="form">
+                <label for="cognom">Cognom</label>
+                <input type="text" id="cognom" name="cognom" required>
+            </div>
+                
+            <div class="form">
+                <label for="email">Adreça</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+                
+            <div class="form">
+                <label for="mensaje">Missatge</label>
+                <textarea id="mensaje" name="mensaje" required></textarea>
             
-            <label for="email">Adreça</label>
-            <input type="email" id="email" name="email" required>
+                <button type="submit">Enviar Mensaje</button>
+            </div>
+                
             
-            <label for="mensaje">Missatge</label>
-            <textarea id="mensaje" name="mensaje" required></textarea>
-            
-            <button type="submit">Enviar Mensaje</button>
-          </form>
+        </form>
     </main>
 
     <footer>
