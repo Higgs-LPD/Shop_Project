@@ -81,10 +81,34 @@
   background-color: #e5ead4;
   }
 
-.img{
-  max-height: 300px;
-  width: auto;
+h3{
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
 }
+
+.texto{
+  display: flex;
+  justify-content: center;
+  font-size: small;
+
+}
+
+.link{
+  display: flex;
+  justify-content: center;
+  padding-top: 2em;
+}
+
+img{
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  margin-left: 120px;
+  height: 200px;
+}
+
+
 
 /* Footer */
 footer{
