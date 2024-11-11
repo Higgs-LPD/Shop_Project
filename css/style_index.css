@@ -33,6 +33,9 @@ header{
 
   /* Le digo que etiqueta ocupa en las columnas (arriba). Lo de abajo sirve para asignar donde va lo que quiero que vaya (Mirar abajo) */
   grid-template-areas: "logo contenedor nav";
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 header img {
@@ -42,18 +45,25 @@ header img {
   margin-left: 1em;
 }
 
+#hamburger{
+  display: none;
+  border: solid white;
+  padding: 1em;
+  border-width: 0.3em;
+}
+
 /* Después de hacer lo de arriba le digo que le toca ir en nav  */
-nav{
+#nave{
   /* Utilizar el grid-area:; me sirve para decirle que lo que he llamado nav arriba y le he dicho que ocupa 2fr pues en el grid-area: nav; va a a izquierda del todo y que
   ocupa 2fr (columnas) */
+  
   grid-area: nav;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
 
 #banner{
-  height: 50vh;
+  height: 100vh;
   background-image: url("../img/material_Escolar_vuelta_cole_consejos_ahorrar.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -64,6 +74,25 @@ nav{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+#banner h1 {
+  font-size: 5em;
+  background-color: #1f0a1d;
+  text-align: center;
+}
+
+#banner p{
+  margin: 1em;
+  font-size: 2em;
+  background-color: #1f0a1d;
+  text-align: center;
+}
+
+#banner button{
+  width: 10em;
+  height: auto;
+  font-size: 2em;
 }
 
 a{
@@ -89,7 +118,7 @@ ul{
 main{
   display: grid;
   grid-area: main;
-  background-color: #e5ead4;
+  background-color: #334f53;
 }
 
 #hot img{
@@ -97,6 +126,7 @@ main{
   height: 15em;
   border: solid black;
   border-width: 0.5em;
+  margin-top: 2em;
 }
 
 article h2{
@@ -104,6 +134,15 @@ article h2{
   text-align: center;
   margin-top: 0.5em;
   margin-bottom: 0.5em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+article p{
+  font-size: 2em;
+  margin-top: 0.2em;
+
 }
 
 #hot{
@@ -115,7 +154,7 @@ article h2{
 
 }
 
-#hotp{
+#texto{
   font-size: 25px;
   display: flex;
   flex-direction: row;
@@ -125,25 +164,48 @@ article h2{
   margin-bottom: 20px;
 }
 
+#foto{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+
 /* Footer */
 footer{
-  display: grid;
+  
   grid-area: footer;
-  grid-template-columns: 4fr 2fr 4fr;
-  gap: 20px;
-  padding: 20px;
-  background-color: #1f0a1d;
-  gap: 1em;
+  grid-template-columns: 2fr 8fr 2fr;
+  
+}
+
+footer h3{
+  color: #334f53;
+}
+
+footer a {
+  color: white;
 }
 
 #footerflex {
-  display: contents; /* Para usar cada .footer-content como item del grid */
-  height: 100%;
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  background-color: #1f0a1d; 
+  padding: 20px; 
+  justify-content: space around;
 }
 
 .footer-content {
-  text-align: center;
-  color: white;
+  flex: 1; 
+  margin: 10px; 
+  text-align: center; 
+}
+
+.footer-content img{
+  width: 2em;
+  height: 2em;
+  margin-top: 10px;
 }
 
 
@@ -157,6 +219,7 @@ footer p{
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (max-width: 600px) {
+
   body{
     display: grid;
     /* 12 columnas de 1fracción se suele usar para versión pc */
@@ -167,6 +230,62 @@ footer p{
     grid-template-rows: 100px 1fr 100px;
     min-height: 100vh;
   }
+
+  #banner{
+    
+    background-image: url("../img/material_Escolar_vuelta_cole_consejos_ahorrar.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    /*cammbiar el color */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #hot{
+    display: flex;
+    flex-direction: column;
+  }
+
+  #nave {
+  display: none;
+
+}
+
+#hamburger {
+  display: flex;
+
+}
+
+#footerflex {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  background-color: #1f0a1d; 
+  padding: 20px; 
+  justify-content: space around;
+}
+
+.footer-content {
+  flex: 1; 
+  margin: 10px; 
+  text-align: center; 
+}
+
+.footer-content img{
+  width: 2em;
+  height: 2em;
+  margin-top: 10px;
+}
+
+
+footer p{
+  color: white;
+}
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -178,7 +297,8 @@ footer p{
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
 @media only screen and (max-width: 1200px) {
-  /* body{
-    grid-template-columns: ;
-  } */
+  
+  
+    
+  }
 }

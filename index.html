@@ -10,12 +10,14 @@
 </head>
 <body>
     <header>
-        <img src="./img/pencils-removebg.png" alt="logo">
+        <img src="./img/pencils.jpg" alt="logo">
         <nav>
+            
             <ul>
-                <li><a href="./index.html">Inici</a></li>
-                <li><a href="./catalog.html">Catàleg</a></li>
-                <li><a href="./contact.html">Contacte</a></li>
+                <li id="nave"><a href="./index.html">Inici</a></li>
+                <li id="nave"><a href="./catalog.html">Catàleg</a></li>
+                <li id="nave"><a href="./contact.html">Contacte</a></li>
+                <li id="hamburger"><img src="./img/menu-hamburger.svg" alt="hamburger"></li>
             </ul>
         </nav>
     </header>
@@ -23,48 +25,57 @@
     <main>
         <article>
             <div id="banner">
-                <h1>(NOM DE LA EMPRESA)</h1>
-                <p>(eslogan)</p>
-                <a href="./contact.html"><button>Contacta'ns</button></a>
+                <h1>SCHOOL UTILS</h1>
+                <p>MATERIAL ESCOLAR BONITO BARATO</p>
+                <button><a href="./contact.html">Contacta'ns</a></button>
             </div> 
         </article>
-
         <article>
             <h2>LO MAS COMPRADO</h2>
             <div id="hot">
-                <img src="./img/estuche-removebg.png" alt="estuche">
-                <img src="./img/lapices-removebg.png" alt="lapices">
-                <img src="./img/desgrapadora.png" alt="desgrapadora">
+                <img id="foto" src="./img/estuche.jpg" alt="estuche">
+                <p id="texto">Estuche VANS</p>
+                <p id="texto">20 euros</p>
+                <a href="./detalls.html"><button>COMPRAR</button></a>
+                <img id="foto" src="./img/lapices.png" alt="lapices">
+                <p id="texto">Lapices de colores</p>
+                <P id="texto">50 euros</P>
+                <a href="./detalls.html"><button>COMPRAR</button></a>
+                <img id="foto" src="./img/mochila.png" alt="mochila">
+                <p id="texto">Mochila Puma</p>
+                <P id="texto">50 euros</P>
+                <a href="./detalls.html"><button>COMPRAR</button></a>
             </div>
             <div id="hotp">
-                <p>Estuche VANS</p>
-                <p>Lapices de colores</p>
-                <p>Desgrapadora</p>
+                
+                
+                
             </div>
         </article>
     </main>
 
     <footer>
-        <div id="footerflex">
-            <div class="footer-content">
-                <h3>Contacte</h3>
-                <p>Email: contacto@miempresa.com</p>
-                <p>Telf: (555) 123-4567</p>
-            </div>
-
-            <div class="footer-content">
-                <h3>Ubicació</h3>
-                <p>Distrito de Sants-Montjuïc</p>
-                <p>Barcelona, Espanya</p>
-            </div>
-
-            <div class="footer-content">
-                <h3>Información Legal</h3>
-                <p><a href="/terminos-y-condiciones">Términos y Condiciones</a></p>
-                <p><a href="/politica-de-privacidad">Política de Privacidad</a></p>
-                <p>&copy; 2024 Mi Empresa. Todos los derechos reservados.</p>
-            </div>
+    <div id="footerflex">
+        <div class="footer-content">
+            <h3>Contacto</h3>
+            <p>Email: contacto@miempresa.com</p>
+            <p>Teléfono: (555) 123-4567</p>
+            <a href="#"><img src="./img/icon/instagram-icon.webp" alt="instagram"></a>
+            <a href="#"><img src="./img/icon/twitter-icon.webp" alt=""></a>
+           
         </div>
+        <div class="footer-content">
+            <h3>Ubicación</h3>
+            <p>Calle Ficticia 123</p>
+            <p>Ciudad, País</p>
+        </div>
+        <div class="footer-content">
+            <h3>Información Legal</h3>
+            <p><a href="/terminos-y-condiciones">Términos y Condiciones</a></p>
+            <p><a href="/politica-de-privacidad">Política de Privacidad</a></p>
+        </div>
+    </div>
+        
     </footer>
 </body>
 </html>

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="icon" type="image/x-icon" href="./img/pencils.jpg">
-    <link rel="stylesheet" href="./css/style_contact.css">
+    <link rel="stylesheet" href="./css/style_detalls.css">
     <title>Contacte</title>
 </head>
 <body>
@@ -23,33 +23,25 @@
     </header>
 
     <main>
-        <form class="formulario-contacto" action="contact.php" method="post">
-            <h2>Formulari Contacte</h2>
-            
-            <div class="form">
-                <label for="nombre">Nom</label>
-                <input type="text" id="nombre" name="nombre" required>
+        <div class="product-details">
+            <div class="product-image">
+                <img src="./img/estuche.jpg" alt="Producto Detalle">
             </div>
-
-            <div class="form">
-                <label for="cognom">Cognom</label>
-                <input type="text" id="cognom" name="cognom" required>
+            <div class="product-info">
+                <div class="title-price">
+                    <h1>Nombre del Producto</h1>
+                    <p class="price">$49.99</p>
+                </div>
+                <div class="description">
+                    <h2>Descripción</h2>
+                    <p>Aquí va una descripción detallada del producto. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum corporis sit facere, magnam libero dolore nulla iste. Ullam ea saepe, harum, tenetur, qui placeat molestias modi quae eligendi tempora voluptatem.</p>
+                </div>
+                <div class="actions">
+                    <button class="buy-button">Comprar</button>
+                    <button class="add-to-cart-button">Añadir a la Cesta</button>
+                </div>
             </div>
-                
-            <div class="form">
-                <label for="email">Adreça</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-                
-            <div class="form">
-                <label for="mensaje">Missatge</label>
-                <textarea id="mensaje" name="mensaje" required></textarea>
-            
-                <button type="submit">Enviar Mensaje</button>
-            </div>
-                
-            
-        </form>
+        </div>
     </main>
 
     <footer>
